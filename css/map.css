@@ -1,0 +1,117 @@
+html {
+    height: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.fill {
+    height: 100%;
+    min-height: 100%;
+}
+
+.h3 {
+    margin-left:-15px;
+    margin-top:0px;
+}
+
+#map{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+#logo {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    height: 100px;
+    width: 250px;
+    background-image: url('../images/ARC_Logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header {
+    width: 95%;
+    margin-left: auto;
+    margin-right:auto; 
+}
+
+#v_text {
+    padding:auto;
+    margin:auto;
+}
+
+#header_desc {
+    font-size: 0.75em;
+    margin-top:10px;
+
+}
+
+#toggleLegends {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 70px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 6px 8px;   
+    font-size:smaller;
+    cursor: pointer;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+}
+
+#zoomLevelBox {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    left: 70px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px 8px;   
+    border: 1px solid #ccc;
+    font-size:smaller;
+}
+
+.credit {
+    postition: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.map-tooltip {
+    font-size: small;
+}
+/*bootstrap has white text for this and the text in the legend pulled from mapbox doesnt show*/
+
+.label {
+    color: black;
+}
+
+.labelhide{
+    display:none !important;
+}
+
+/*leaflet control group layers */
+
+.leaflet-control-layers-group-name {
+    font-weight: bold;
+    font-size:13px;
+    margin-bottom: .2em;
+    display: block;
+    cursor:pointer;
+    position:relative;
+}
+
+.leaflet-control-layers-group {
+    margin-bottom: .5em;
+}
+
+.leaflet-control-layers-group label {
+    padding-left: .5em;
+}
