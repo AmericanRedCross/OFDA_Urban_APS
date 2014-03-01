@@ -10,7 +10,7 @@ var mapTypeTest = function(url) {
 // either a Leaflet or MapBox tileLayer
 // Returns the new layerObj
 var layerObjMaker = function(layerObj) {
-    
+
     var newObj = {}
     var layers = [];
     for (var layer in layerObj) {
@@ -29,7 +29,7 @@ var layerObjMaker = function(layerObj) {
     return newObj;
 }
 
-/* 
+/*
 baseMaker takes an object containing a tileLayer url and attribution
 it returns a condensed object of a tileLayer containing the attribution and a maxZoom
 */
@@ -38,7 +38,7 @@ var baseMaker = function(layerObj) {
     return base_layers;
 };
 
-/* 
+/*
 overlayMaker takes an object containting objects of tileLayers
 */
 var overlayMaker = function (groupObj) {
@@ -65,7 +65,7 @@ var map = L.map('map', {
 
 var legendControl = L.mapbox.legendControl().addTo(map);
 
-/* 
+/*
 Add and remove grid overlays
 
 Since we don't know how many more layers will be added in the future,
