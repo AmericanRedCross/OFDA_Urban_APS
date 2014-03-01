@@ -1,30 +1,58 @@
-#map {
-    height: 800px;
-
-    /*display: block;*/
-    margin: 0px;
+html, body {
+	height: 100%;
+    width: 100%;
+    margin:0;
 }
 
-.logo {
-	width: 80%;
-	height: 80%;
-	padding: 5px;
-	margin: 5px;
+#map {
+    position: absolute;
+    top: 100px;
+	bottom: 0;
+	right:0;
+	left:0;
+}
+
+#header {
+    margin-right:auto;
+    margin-left: auto;
+    width: 95%;
+}
+
+#header_desc {
+    margin-top:10px;
+    font-size: 0.75em;
+}
+
+#logo {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    height: 90px;
+    width: 250px;
+    background-image: url('../images/ARC_Logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h3 {
+    margin-top:0px;
+    margin-left:-15px;
 }
 
 .credit {
-	postition: absolute;
 	bottom: 0;
 	left: 0;
+	postition: absolute;
 }
 
-.fill { 
+.map-tooltip {
+    font-size: small;
+}
+/*bootstrap has white text for this and the text in the legend pulled from mapbox doesnt show*/
+
+.fill {
     min-height: 100%;
     height: 100%;
-}
-
-html, body {
-	height:100%;
 }
 
 .mapTitle {
@@ -33,8 +61,12 @@ html, body {
 }
 
 ul {
-	list-style-type: none;
 	margin-left:-40px;
+	list-style-type: none;
+}
+
+p {
+	margin: 20px 5px;
 }
 
 #title {
@@ -45,27 +77,27 @@ ul {
 
 #zoomLevelBox {
 	position: absolute;
+	top: 110px;
+	left: 70px;
 	z-index: 9999;
-	top: 10px;
-	left: 50px;
-	background-color: white;
-	border-radius: 4px;
-	padding: 6px 8px;	
+	padding: 6px 8px;
 	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: white;
 	font-size:smaller;
 }
 
 #toggleLegends {
 	position: absolute;
+	top: 110px;
+	right: 70px;
 	z-index: 1;
-	top: 10px;
-	right: 55px;
-	background-color: white;
+	padding: 6px 8px;
 	border-radius: 5px;
-	padding: 6px 8px;	
+	background-color: white;
+	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
 	font-size:smaller;
 	cursor: pointer;
-	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
 }
 
 .timeicon {
@@ -76,6 +108,11 @@ ul {
 	font-size: small;
 }
 
+.navbar {
+        height: 100px;
+        background-color: #fff;
+      }
+
 /*bootstrap has white text for this and the text in the legend pulled from mapbox doesnt show*/
 .label {
 	color: black;
@@ -85,19 +122,58 @@ ul {
     display:none !important;
 }
 
+/* Legend for map_changes */
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+
+    /*round the edges so much it becomes a circle */
+    border-radius: 99px;
+}
+
+/* Legend for map_changes */
+.legend_classification {
+    color: #555;
+}
+.legend_classification i {
+    padding-top: 1px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 8px;
+    opacity: 1;
+}
+
+/* CSS for map_imagery */
+#range {width: 100%;}
+.leaflet-top .leaflet-control-zoom {margin-top: 20px;}
+
+/* CSS for Map Captions */
+.caption {font-style: italic; text-align: left;}
+
+
 /*leaflet control group layers */
+
 .leaflet-control-layers-group-name {
-	font-weight: bold;
-	font-size:13px;
-	margin-bottom: .2em;
-	display: block;
+    position:relative;
+    display: block;
+    margin-bottom: .2em;
+    font-weight: bold;
+    font-size:13px;
     cursor:pointer;
 }
 
 .leaflet-control-layers-group {
-	margin-bottom: .5em;
+    margin-bottom: .5em;
 }
 
 .leaflet-control-layers-group label {
-	padding-left: .5em;
+    padding-left: .5em;
 }
