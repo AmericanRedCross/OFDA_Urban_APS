@@ -130,14 +130,6 @@ map.on('zoomend', function(){
     $('#zoomLevel').html(zoomLevel);
 });
 
-//map size code
-$('#map').css('height', ($(window).height()));
-$(window).on('resize', resize);
-resize();
-function resize(){
-        $('#map').css('height', ($(window).height()));
-}
-
 //toggleLegend code
 function toggleLegend(element) {
     if($(element).hasClass("visible")){
